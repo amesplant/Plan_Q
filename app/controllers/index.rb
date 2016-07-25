@@ -7,7 +7,6 @@ end
 get '/users/new' do
 
   erb :'users/new' #show new users view
-
 end
 
 # create a new user
