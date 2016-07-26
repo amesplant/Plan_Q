@@ -9,7 +9,7 @@
   <p class="message">Already registered? <a href="#">Sign In</a></p>
 </form>
 
-<form class="login-form" action = "/users" method="post">
+<form class="login-form" action = "/sessions" method="post">
   <input type="text" placeholder="email address" name="user[email]" value="<%= @user.try(:name) %>"/>
   <input type="password" placeholder="password" name="user[password]" />
   <button>login</button>

@@ -1,3 +1,9 @@
+# when users have successfully logged in ... send them to ... whereverr
+get '/users' do
+  
+end
+
+
 # send to registration form
 get "/users/new" do
   erb :"users/new"
@@ -29,9 +35,4 @@ post "/users" do
       erb :"/users/new" # show errors
     end
   end
-end
-
-# when users have successfully logged in ... send them to ... whereverr
-get '/users' do
-  "Hello World"
 end
