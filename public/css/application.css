@@ -6,6 +6,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+nav {
+  margin: 0;
+  background-color: white;
+  padding: 0.3em;
+  display: fixed;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: pink;
+  border: none;
+  padding: 15px 10px; //vertically center
+}
+
+nav a.btn_user, nav input[type="submit"]  {
+  background-color: orange;
+  float: right;
+  border: none;
+  padding: 15px 10px; //vertically center
+}
+
 .container {
   margin: 20px auto;
   width: 600px;

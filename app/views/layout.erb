@@ -12,24 +12,7 @@
   <title>Plan Q</title>
 </head>
 
-<nav id="main-naviation">
-  <ul>
-    <% if session[:user_id] %>
-      <% user = User.find(session[:user_id]) %>
-      <li><a href = "/"><%= user.name %></a></li>
-      <li>
-        <form action="/sessions" method="post">
-          <input type="hidden" name="_method" value="delete">
-          <input type="submit" value="Log Out">
-        </form>
-      </li>
-    <% else %>
-      <li><a href = "sessions/">Register</a><li>
-      <li><a href = "sessions/">Login</a></li>
-    <% end %>
-    <li><a href="<%= '/' %>">Home</a></li>
-  </ul>
-</nav>
+
 
 <body>
   <%= yield %>
