@@ -5,27 +5,40 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
 
 nav {
   margin: 0;
   background-color: white;
   padding: 0.3em;
   display: fixed;
+  color: #3EA0CA;
 }
 
 nav a {
   display: inline-block;
   text-decoration: none;
-  background-color: pink;
   border: none;
-  padding: 15px 10px; //vertically center
+  padding: 15px 10px;
 }
 
-nav a.btn_user, nav input[type="submit"]  {
-  background-color: orange;
+nav a:hover, nav input[type="submit"]:hover {
+  background-color: #CCC;
+}
+
+nav a.btn_user {
+  float: right;
+}
+
+nav input[type="submit"] {
+  background-color: white;
   float: right;
   border: none;
   padding: 15px 10px; //vertically center
+  text-decoration: none;
+  color: #3EA0CA;
 }
 
 .container {
