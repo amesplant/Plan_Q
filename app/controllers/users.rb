@@ -1,6 +1,7 @@
 # when users have successfully logged in ... send them to ... whereverr
 get '/users' do
 
+  erb :index
 end
 
 
@@ -19,7 +20,7 @@ post "/users" do
 
     # try AJAX
     if request.xhr?
-      # remove form and replace with content?
+      return "success"
     else
       redirect "/users" #redirect back to users index page
     end

@@ -25,6 +25,13 @@ $(document).ready(function() {
     })
     .done(function(response) {
       // capture the message that the route returns back once the call is made to it
+
+      // if user registered successfully, the controller response will be returned "success"
+      if (response === "success") {
+        // redirect
+        window.location = "/";
+      }
+
       // expecting response to be @errors, which needs to be received as a JSON
       var errors = response
       if(errors.name) {
@@ -50,7 +57,9 @@ $(document).ready(function() {
         $(".password").attr("placeholder", passwordError);
       } else {
         $("input").removeAttr("border");
-      }
+      };
+
+
     });
   });
 
