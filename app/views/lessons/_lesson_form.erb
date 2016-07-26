@@ -1,0 +1,11 @@
+<form class="login-form" action = "/sessions" method="post">
+  <input type="text" placeholder="Lesson Name" name="lesson[name]" value="<%= @lesson.try(:name) %>"/>
+  <input type="text" placeholder="Short Description" name="lesson[description]" value="<%= @lesson.try(:description) %>"/>
+  <select>
+    <option value="default">Course for this lesson</option>
+    <option value="Algebra">Algebar</option>
+    <option value="Geometry">Geometery</option>
+    <option value="Physics">Physics</option>
+  </select>
+  <button>Start Building</button>
+</form>

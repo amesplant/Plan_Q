@@ -1,0 +1,21 @@
+<%= erb :"_navigation", :layout => false %>
+
+<div id="lessons_container">
+  <div id="nav_lessons">
+    <a class="create_lesson" href="/lessons/new">Build a Lesson</a>
+  </div>
+
+  <% @lessons.each do |lesson| %>
+    <div class="lesson_box">
+      <div id="lesson_header">
+        <div class="lesson_standard_id">8.NS.A.1</div>
+        <a class="lesson_delete" href="/lessons/<%= lesson.id %>/edit">edit</a>
+        <a class="lesson_delete" href="/lessons/<%= lesson.id %>/delete">delete</a>
+        <a class="lesson_delete" href="/lessons/<%= lesson.id %>">view</a>
+      </div>
+      <div class="lesson_title"><%= lesson.title %></div>
+      <div class="lesson_description"><%= lesson.description %></div>
+    </div>
+  <% end %>
+
+</div>

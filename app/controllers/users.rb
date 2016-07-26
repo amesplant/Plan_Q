@@ -4,7 +4,6 @@ get '/users' do
   erb :index
 end
 
-
 # send to registration form
 get "/users/new" do
   erb :"users/new"

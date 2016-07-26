@@ -40,6 +40,69 @@ nav input[type="submit"] {
   text-decoration: none;
   color: #3EA0CA;
 }
+/* Lessons */
+
+#lessons_container {
+  background-color: white;
+  border: 5px solid #E88B3D;
+  border-radius: 15px;
+  margin: 5% 5% 5% 20%;
+  min-height: 400px;
+  text-align: center;
+}
+
+#nav_lessons {
+  border-bottom: 2px solid #CCC;
+}
+
+#nav_lessons a {
+  display: inline-block;
+  margin: 2%;
+  text-decoration: none;
+  color: #3EA0CA;
+}
+
+.lesson_box {
+  text-align: left;
+  border: 3px solid #3EA0CA;
+  border-radius: 9px;
+  width: 20%;
+  margin: 2%;
+  height: 130px;
+}
+
+#lesson_header {
+  color: white;
+  background-color: #3EA0CA;
+  border-radius: 2px 2px 0 0;
+}
+
+.lesson_standard_id {
+  display: inline-block;
+  vertical-align: bottom;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 8px;
+}
+
+.lesson_title, .lesson_description {
+  font-size: 0.8em;
+  margin: 8px;
+  color: #777;
+  overflow: hidden;
+}
+
+a.lesson_title{
+  font-weight: bolder;
+}
+
+a.lesson_edit, a.lesson_delete  {
+  float:right;
+  font-size: 0.8em;
+  text-decoration: none;
+  margin: 7px 3px;
+}
+
 
 .container {
   margin: 20px auto;

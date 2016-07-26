@@ -1,7 +1,9 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  has_many :courses
+  has_many :lessons, through: :plans
+  has_many :plans
+
 
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
