@@ -1,3 +1,11 @@
+body {
+  background-color: #3CB5E4;
+  background-image: url("../images/background.png");
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
