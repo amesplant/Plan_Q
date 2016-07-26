@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :encrypted_password, presence: true
   validate :password_complexity
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+
 
   def password
     # encrypt the password
@@ -23,7 +25,8 @@ class User < ActiveRecord::Base
 
   def password_complexity
     if @user_entered_password && @user_entered_password.length < 6
-      self.errors.add(:password, "password needs to have at least 6 characters")
+      self.errors.add(:password, "should be at least 6 characters")
     end
   end
+
 end

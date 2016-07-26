@@ -28,7 +28,6 @@ post "/users" do
     else
       erb :"/users/new" # show errors
     end
-
   end
 end
 

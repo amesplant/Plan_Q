@@ -25,12 +25,33 @@ $(document).ready(function() {
     })
     .done(function(response) {
       // capture the message that the route returns back once the call is made to it
-      // expecting to get back @errors
-      // send back as a JSON
-      console.log(response);
-    });
+      // expecting response to be @errors, which needs to be received as a JSON
+      var errors = response
+      if(errors.name) {
+        nameError = "Name " + errors.name[0];
+        $(".name").css("border","1px solid red");
+        $(".name").attr("placeholder", nameError);
+      } else {
+        $("input").removeAttr("border");
+      }
+      if(errors.email) {
+        emailError = "Email " + errors.email[0];
+        $(".email").css("border","1px solid red");
+        $(".email").val("");
+        $(".email").attr("placeholder", emailError);
+      } else {
+        $("input").removeAttr("border");
+      }
 
-    console.log("submitting form");
+      if(errors.password) {
+        passwordError = "Password " + errors.password[0];
+        $(".password").css("border","1px solid red");
+        $(".password").val("");
+        $(".password").attr("placeholder", passwordError);
+      } else {
+        $("input").removeAttr("border");
+      }
+    });
   });
 
 });
