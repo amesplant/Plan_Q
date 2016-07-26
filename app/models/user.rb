@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 
   def password_complexity
     if @user_entered_password && @user_entered_password.length < 6
-      self.errors.add(:password, "password need to have at least 6 characters")
+      self.errors.add(:password, "password needs to have at least 6 characters")
     end
   end
 end
