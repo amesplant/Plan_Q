@@ -103,6 +103,60 @@ a.lesson_edit, a.lesson_delete  {
   margin: 7px 3px;
 }
 
+/* New Lesson Form */
+#lesson-form {
+  width: 40%;
+  border: 3px solid #DAA43B;
+  border-radius: 12px;
+  background-color: white;
+  margin: 180px auto auto 45%;
+  padding: 0;
+}
+
+#lesson-form input, #lesson-form button {
+  background-color: transparent;
+  display: block;
+  padding: 4%;
+  line-height: 1em;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #CCC;
+  width: 92%;
+  color: #3EA0CA;
+  border-radius: 10px 10px 0 0;
+}
+
+.drop_down {
+    border-radius: 3px;
+    border-bottom: 2px solid #CCC;
+    padding: 10px 3px;
+}
+
+.drop_down select {
+    border: none;
+    color: #777;
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+}
+
+.drop_down select:focus {
+    outline: none;
+}
+
+#lesson-form button {
+  border: 0;
+  border-radius: 6px;
+  background-color: #4EBCE6;
+  width: 50%;
+  color: white;
+  margin: 4% 4% 4% auto;
+}
+
+#lesson-form button:hover {
+  background-color:#3CB5E4;
+}
+
 
 .container {
   margin: 20px auto;

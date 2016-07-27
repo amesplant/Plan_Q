@@ -5,6 +5,7 @@
     <a class="create_lesson" href="/lessons/new">Build a Lesson</a>
   </div>
 
+  <% if @lessons %>
   <% @lessons.each do |lesson| %>
     <div class="lesson_box">
       <div id="lesson_header">
@@ -17,5 +18,5 @@
       <div class="lesson_description"><%= lesson.description %></div>
     </div>
   <% end %>
-
+<% end %>
 </div>

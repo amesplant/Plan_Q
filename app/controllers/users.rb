@@ -11,7 +11,6 @@ end
 
 # process registration form
 post "/users" do
-  #create new user
   @user = User.new(params[:user])
   #saves new user or returns false if unsuccessful
   if @user.save
@@ -21,7 +20,7 @@ post "/users" do
     if request.xhr?
       return "success"
     else
-      redirect "/users" #redirect back to users index page
+      redirect "/users" 
     end
 
   else

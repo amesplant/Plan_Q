@@ -1,5 +1,5 @@
 get '/' do
-  if session[:user_id]
+  if logged_in?
     erb :index
   else
     erb :"users/new"
