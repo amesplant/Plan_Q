@@ -1,9 +1,32 @@
 $(document).ready(function() {
 
   // toggle the log-in and regsitration window
-  $(".message a").on("click", function() {
-    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+  $("#nav_registration a").on("click", function() {
+    var btn_flag = $(this).attr("href");
+
+    $('form').animate({
+      height: "toggle",
+      opacity: "toggle"
+    }, "slow" ,function() {
+
+    });
   });
+
+  // --- load the courses list --- //
+  $("#build_lesson").on( "click", "a", function( event ) {
+      event.preventDefault();
+      url="/" + $(this).attr("id");
+      console.log(url);
+      $.ajax({
+        url: url,
+        method: "get"
+      })
+      .done(function(response) {
+        $("#lesson-form").append(response);
+
+      });
+  });
+  // ----------------------------- //
 
   $(".register-form").on("submit", function() {
     // stop the form from being submitted if I was called

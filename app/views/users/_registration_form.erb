@@ -6,14 +6,12 @@
   <input class="email" type="text" placeholder="email address" name="user[email]" value="<%= @user.try(:email) %>" />
   <input class="password" type="password" placeholder="password (at least 6 characters)" name="user[password]" />
   <button>create</button>
-  <p class="message">Already registered? <a href="#">Sign In</a></p>
 </form>
 
 <form class="login-form" action = "/sessions" method="post">
   <input type="text" placeholder="email address" name="user[email]" value="<%= @user.try(:name) %>"/>
   <input type="password" placeholder="password" name="user[password]" />
   <button>login</button>
-  <p class="message">Not registered? <a href="#">Create an account</a></p>
 </form>
 
 </div>

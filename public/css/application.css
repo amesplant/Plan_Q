@@ -5,6 +5,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 a, a:visited, a:hover, a:active {
   color: inherit;
 }
@@ -42,7 +49,9 @@ nav input[type="submit"] {
 }
 
 #container {
-  margin: 4%;
+  margin: 6% 6% 0 6%;
+  height: 100%;
+  min-width: 700px;
 }
 
 #container h1, h2 {
@@ -52,6 +61,116 @@ nav input[type="submit"] {
 
 #container h1 {
   font-weight: bolder;
+}
+
+/* Login / Registartion */
+.btn_sign_up {
+  position: relative;
+  top: 15px;
+  left: 139px;
+  width: 120px;
+  height: 60px;
+  background: url("../images/flag_signup.png") no-repeat 0;
+}
+
+.btn_login {
+  position: relative;
+  top: 25px;
+  left: 139px;
+  width: 130px;
+  height: 60px;
+  background: url("../images/flag_login.png") no-repeat 0;
+}
+
+.btn_tour {
+  position: relative;
+  top: -70px;
+  left: 1px;
+  width: 120px;
+  height: 60px;
+  background: url("../images/flag_tour.png") no-repeat 0;
+}
+
+#nav_registration {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  margin: 3%;
+  height: 100%;
+}
+
+#nav_registration a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  line-height: 60px;
+}
+
+#nav_registration .btn_sign_up, .btn_login {
+  padding-left: 17px;
+}
+
+#nav_registration .btn_tour {
+  padding-left: 50px;
+}
+
+#nav_registration .flagpole {
+  display: block;
+  width: 260px;
+  height: 375px;
+  background: url("../images/flag_pole.png") no-repeat top center;
+  background-color: transparent;
+  height: 100%;
+}
+
+/* Home Page */
+
+#home_navigation {
+  display: block;
+  color: white;
+  margin: 30px auto;
+}
+
+#home_navigation .btn_container {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1%;
+  text-align: center;
+}
+
+
+#home_navigation .btn_home {
+  border: 3px white solid;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+#home_navigation .btn_container a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#home_navigation .btn_title {
+  margin: 5%;
+}
+
+#btn_build {
+  background: url("../images/btn_build.png") no-repeat center center;
+}
+
+#btn_lessons {
+  background: url("../images/btn_lessons.png") no-repeat center center;
+}
+
+#btn_calendar {
+  background: url("../images/btn_calendar.png") no-repeat center center;
+}
+
+#btn_help {
+  background: url("../images/btn_help.png") no-repeat center center;
 }
 
 /* Lessons */
@@ -146,13 +265,23 @@ a.lesson_edit {
 }
 
 /* New Lesson Form */
+
+#build_lesson {
+  margin: 5% auto 0 5%;
+  height: 100%;
+  padding-top: 100px;
+  background: url("../images/build_lesson_pencil_ruler.png") no-repeat top left;
+}
+
 #lesson-form {
+  position: relative;
   width: 40%;
   border: 3px solid #DAA43B;
   border-radius: 12px;
   background-color: white;
-  margin: 180px auto auto 45%;
+  margin: 0 auto auto 35%;
   padding: 0;
+  min-width: 300px;
 }
 
 #lesson-form input, #lesson-form button {
@@ -168,22 +297,20 @@ a.lesson_edit {
   border-radius: 10px 10px 0 0;
 }
 
-.drop_down {
-    border-radius: 3px;
-    border-bottom: 2px solid #CCC;
-    padding: 10px 3px;
-}
+ a.segue {
+   cursor: pointer;
+   color: #999;
+   display: block;
+   padding: 4%;
+   border-bottom: 2px solid #CCC;
+ }
 
-.drop_down select {
-    border: none;
-    color: #777;
-    width: 100%;
-    box-shadow: none;
-    background: transparent;
-}
+ a.seque:hover {
+   cursor: pointer;
+ }
 
-.drop_down select:focus {
-    outline: none;
+#lesson-form .fa, #lesson_unit .fa,  #lesson_class .fa {
+  float:right;
 }
 
 #lesson-form button {

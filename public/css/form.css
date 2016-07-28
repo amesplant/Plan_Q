@@ -1,9 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  min-width: 300px;
+  margin: 4% 0;
 }
 .form {
   position: relative;
@@ -11,7 +13,6 @@
   background: #FFFFFF;
   border: 4px #3EA0CA solid;
   border-radius: 12px;
-  max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;

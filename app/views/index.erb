@@ -1,8 +1,39 @@
 <!-- Navigation -->
 <%= erb :"_navigation", :layout => false %>
 
+<div id="container">
+  <h1>Lesson Planning made easier</h1>
+  <h2>designed for teachers by teachers</h1>
 
+  <div id="home_navigation">
+    <div class="btn_container">
+      <a href = "/lessons/new">
+        <div id="btn_build" class="btn_home"></div>
+        <div class="btn_title">Build a Lesson</div>
+      </a>
+    </div>
 
-<div class="container">
+    <div class="btn_container">
+      <a href = "/lessons">
+        <div id="btn_lessons" class="btn_home"></div>
+        <div class="btn_title">Go to Lessons</div>
+      </a>
+    </div>
+
+    <div class="btn_container">
+      <a href = "/calendar">
+        <div id="btn_calendar" class="btn_home"></div>
+        <div class="btn_title">View Calendar</div>
+      </a>
+    </div>
+
+    <div class="btn_container">
+      <a href = "/help">
+        <div id="btn_help" class="btn_home"></div>
+        <div class="btn_title">Get Help</div>
+      </a>
+    </div>
+
+  </div>
 
 </div>
