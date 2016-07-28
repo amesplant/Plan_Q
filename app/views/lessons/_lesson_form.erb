@@ -1,7 +1,6 @@
 <form id="lesson-form" action = "/lessons" method="post">
   <input type="text" class="title" placeholder="Lesson Name" name="lesson[title]" value="<%= @lesson.try(:name) %>"/>
   <input type="text" placeholder="Short Description" name="lesson[description]" value="<%= @lesson.try(:description) %>"/>
-  <input type="hidden" name="lesson[user_id]" value="<%= session[:user_id] %>">
   <div class="drop_down">
     <select>
       <option value="default">Course for this lesson</option>

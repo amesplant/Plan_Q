@@ -12,9 +12,9 @@ $(document).ready(function() {
     // capture the form so that we can extract the url(action) and method (get/post) and data from form
     var newUserForm = $(this);
     // where does the form get sent to?
-    var url = $(this).attr("action");
+    var url = newUserForm.attr("action");
     // get or post?
-    var method = $(this).attr("method");
+    var method = newUserForm.attr("method");
     // capture the data from the form
     var formData = newUserForm.serialize();
 

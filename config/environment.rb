@@ -31,3 +31,5 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+ENV['GEM_PATH'] = '/path/to/your/home/ruby/gems:/lib/ruby/gems/1.9.3'

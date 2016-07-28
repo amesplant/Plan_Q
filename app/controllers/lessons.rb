@@ -1,7 +1,8 @@
 # show all lessons
 get "/lessons" do
-  if logged_in
+  if logged_in?
     user = User.find(session[:user_id])
+    p user.lessons
     @lessons = user.lessons
     erb :"lessons/index"
   else
@@ -23,6 +24,8 @@ end
 post '/lessons' do
   @lesson = Lesson.new(params[:lesson])
   if @lesson.save
+    user = User.find(session[:user_id])
+    user.plans.create(lesson: @lesson)
     # try AJAX
     if request.xhr?
       return "success"
