@@ -1,0 +1,7 @@
+<%= erb :"_navigation", :layout => false %>
+
+<form id="lesson-form" action = "/lessons/<%= @lesson.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <%= erb :"/lessons/_lesson_form", :layout => false %>
+  <button>Save</button>
+</form>

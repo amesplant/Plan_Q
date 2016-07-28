@@ -51,6 +51,10 @@ nav input[type="submit"] {
   text-align: center;
 }
 
+#lessons_container a {
+  text-decoration: none;
+}
+
 #nav_lessons {
   border-bottom: 2px solid #CCC;
 }
@@ -68,7 +72,7 @@ nav input[type="submit"] {
   border-radius: 9px;
   width: 20%;
   margin: 2%;
-  height: 130px;
+  height: 140px;
 }
 
 #lesson_header {
@@ -77,30 +81,54 @@ nav input[type="submit"] {
   border-radius: 2px 2px 0 0;
 }
 
+#lesson_header form {
+  float: right;
+}
+
 .lesson_standard_id {
   display: inline-block;
   vertical-align: bottom;
-  font-weight: bold;
-  font-size: 1em;
+  font-weight: bolder;
+  font-size: .9em;
   padding: 8px;
 }
 
-.lesson_title, .lesson_description {
+.lesson_title {
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 0.8em;
   margin: 8px;
   color: #777;
+}
+
+.lesson_box .lesson_description {
+  height: 100%;
   overflow: hidden;
+  font-size: 0.8em;
+  margin: 8px;
+  color: #777;
 }
 
 a.lesson_title{
   font-weight: bolder;
+  margin: 0;
 }
 
-a.lesson_edit, a.lesson_delete  {
+a.lesson_edit {
   float:right;
   font-size: 0.8em;
   text-decoration: none;
   margin: 7px 3px;
+}
+
+.lesson_delete {
+  width: 18px;
+  height: 100%;
+  background: url("../images/btnTrash.png") no-repeat 0 7px;
+  border: none;
+  background-color: transparent;
 }
 
 /* New Lesson Form */

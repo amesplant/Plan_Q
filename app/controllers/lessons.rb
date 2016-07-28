@@ -2,12 +2,37 @@
 get "/lessons" do
   if logged_in?
     user = User.find(session[:user_id])
-    p user.lessons
     @lessons = user.lessons
     erb :"lessons/index"
   else
     erb :"users/new"
   end
+end
+
+get '/lessons/:id/edit' do
+  @lesson = Lesson.find(params[:id])
+  erb :'lessons/edit'
+end
+
+put '/lessons/:id' do
+  @lesson = Lesson.find(params[:id])
+  @lesson.assign_attributes(params[:lesson])
+  if @lesson.save
+    if request.xhr?
+      return "success"
+    else
+      redirect "/lessons"
+    end
+  else
+    erb :'lessons/edit'
+  end
+end
+
+# delete a lesson
+delete "/lessons/:id" do
+  @lesson = Lesson.find(params[:id])
+  @lesson.destroy
+  redirect "/lessons"
 end
 
 # new lesson form

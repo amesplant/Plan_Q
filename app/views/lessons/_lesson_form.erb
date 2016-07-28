@@ -1,13 +1,10 @@
-<form id="lesson-form" action = "/lessons" method="post">
-  <input type="text" class="title" placeholder="Lesson Name" name="lesson[title]" value="<%= @lesson.try(:name) %>"/>
-  <input type="text" placeholder="Short Description" name="lesson[description]" value="<%= @lesson.try(:description) %>"/>
-  <div class="drop_down">
-    <select>
-      <option value="default">Course for this lesson</option>
-      <option value="Algebra">Algebra</option>
-      <option value="Geometry">Geometery</option>
-      <option value="Physics">Physics</option>
-    </select>
-  </div>
-  <button>Start Building</button>
-</form>
+<input type="text" class="title" placeholder="Lesson Name" name="lesson[title]" value="<%= @lesson.try(:title) %>"/>
+<input type="text" placeholder="Short Description" name="lesson[description]" value="<%= @lesson.try(:description) %>"/>
+<div class="drop_down">
+  <select>
+    <option value="default">Course for this lesson</option>
+    <option value="Algebra">Algebra</option>
+    <option value="Geometry">Geometery</option>
+    <option value="Physics">Physics</option>
+  </select>
+</div>
