@@ -15,15 +15,18 @@ $(document).ready(function() {
   // --- load the courses list --- //
   $("#build_lesson").on( "click", "a", function( event ) {
       event.preventDefault();
-      url="/" + $(this).attr("id");
+      // var url="/" + $(this).attr("id");
+      var url = "/standards"
+      // var url="https://standards.trails.by/commoncore/q.php?c=math&g=8"
       console.log(url);
       $.ajax({
         url: url,
-        method: "get"
+        method: "get",
+        dataType: "JSON"
       })
       .done(function(response) {
-        $("#lesson-form").append(response);
-
+        // $("#lesson-form").append(response);
+        console.log(response);
       });
   });
   // ----------------------------- //

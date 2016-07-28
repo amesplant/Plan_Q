@@ -1,9 +1,11 @@
 require 'net/http'
+require 'uri'
 
 get "/standards" do
-  url="https://standards.trails.by/commoncore/q.php?c=math&g=8"
+  url=URI("https://standards.trails.by/commoncore/q.php?c=math&g=8")
 
   if request.xhr?
-    return url
+    Net::HTTP.get(url)
   end
+
 end
