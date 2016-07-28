@@ -40,6 +40,20 @@ nav input[type="submit"] {
   text-decoration: none;
   color: #3EA0CA;
 }
+
+#container {
+  margin: 4%;
+}
+
+#container h1, h2 {
+  color: white;
+  margin: 4px 0;
+}
+
+#container h1 {
+  font-weight: bolder;
+}
+
 /* Lessons */
 
 #lessons_container {
