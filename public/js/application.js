@@ -20,8 +20,26 @@ $(document).ready(function() {
   // --- load the courses list --- //
   $("#build_lesson").on( "click", "a", function( event ) {
       event.preventDefault();
-      // var url="/" + $(this).attr("id");
-      var url = "/standards"
+      var url="/" + $(this).attr("id");
+      console.log(url);
+      $.ajax({
+        url: url,
+        method: "get"
+      })
+      .done(function(response) {
+        // expect the response to send back a partial to display in the #lesson-form
+        console.log(response);
+        $("#lesson-form").empty();
+        $("#lesson-form").append(response);
+
+      });
+  });
+  // ----------------------------- //
+
+  // --- load the standards list --- //
+  $("#build_lesson").on( "click", "a", function( event ) {
+      event.preventDefault();
+      var url="/" + $(this).attr("id");
       // var url="https://standards.trails.by/commoncore/q.php?c=math&g=8"
       $.ajax({
         url: url,
@@ -29,7 +47,7 @@ $(document).ready(function() {
         dataType: "JSON"
       })
       .done(function(response) {
-        console.log(response);
+        // console.log(response);
       });
   });
   // ----------------------------- //

@@ -1,6 +1,6 @@
 <div id="lesson_name"><input type="text" class="title" placeholder="Lesson Name" name="lesson[title]" value="<%= @lesson.try(:title) %>"/></div>
 <div id="lesson_description"><input type="text" placeholder="Short Description" name="lesson[description]" value="<%= @lesson.try(:description) %>"/></div>
-<a class="segue">Course for this lesson<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+<a class="segue" id="courses">Course for this lesson<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
 <a class="segue">Class or classes for this lesson<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
 <a class="segue" id="standards">Standards<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
 <a class="segue">Unit<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>

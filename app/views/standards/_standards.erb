@@ -1,0 +1,11 @@
+<div id="nav_build_lesson">
+  <a href="#" class="cancel">cancel</a>
+  <div class="title">Standards</div>
+  <a href="#" class="add">add course</a>
+</div>
+
+<% standards.each do |standard| %>
+  <% if standard["asn_statementNotation"] != "" %>
+      <a class="segue"><%= standard["asn_statementNotation"] %><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+    <% end %>
+<% end %>
