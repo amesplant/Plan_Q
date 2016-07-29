@@ -39,6 +39,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
+    netrc (0.7.9)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -50,6 +51,8 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (11.2.2)
+    rest_client (1.8.3)
+      netrc (~> 0.7.7)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -98,6 +101,7 @@ DEPENDENCIES
   pg
   rack-test
   rake
+  rest_client
   rspec (~> 3.0)
   shotgun
   shoulda-matchers
