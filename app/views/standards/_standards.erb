@@ -5,7 +5,7 @@
 </div>
 
 <% standards.each do |standard| %>
-  <% if standard["asn_statementNotation"] != "" %>
+  <% if standard["asn_statementNotation"] != "" && !standard["asn_statementNotation"].match(/^CCSS.Math.Practice.MP/) %>
       <a class="segue"><%= standard["asn_statementNotation"] %><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
     <% end %>
 <% end %>

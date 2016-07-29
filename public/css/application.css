@@ -318,6 +318,10 @@ nav input[type="submit"] {
 }
 
 #nav_build_lesson {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
   text-align: center;
   color: #56A9F6;
   display: inline-block;

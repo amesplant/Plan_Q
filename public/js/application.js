@@ -20,37 +20,20 @@ $(document).ready(function() {
   // --- load the courses list --- //
   $("#build_lesson").on( "click", "a", function( event ) {
       event.preventDefault();
-      var url="/" + $(this).attr("id");
-      console.log(url);
+      var route="/" + $(this).attr("id");
+      console.log(route);
       $.ajax({
-        url: url,
+        url: route,
         method: "get"
       })
       .done(function(response) {
         // expect the response to send back a partial to display in the #lesson-form
-        console.log(response);
         $("#lesson-form").empty();
         $("#lesson-form").append(response);
-
       });
   });
   // ----------------------------- //
 
-  // --- load the standards list --- //
-  $("#build_lesson").on( "click", "a", function( event ) {
-      event.preventDefault();
-      var url="/" + $(this).attr("id");
-      // var url="https://standards.trails.by/commoncore/q.php?c=math&g=8"
-      $.ajax({
-        url: url,
-        method: "get",
-        dataType: "JSON"
-      })
-      .done(function(response) {
-        // console.log(response);
-      });
-  });
-  // ----------------------------- //
 
   $(".register-form").on("submit", function() {
     // stop the form from being submitted if I was called
