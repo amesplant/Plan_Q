@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  // user drop down
+  $(".btn_user").on("click", function() {
+    event.preventDefault();
+    $("#logout").css("display","block");
+  })
 
   // toggle the log-in and regsitration window
   $("#nav_registration a").on("click", function() {
@@ -8,7 +13,7 @@ $(document).ready(function() {
       height: "toggle",
       opacity: "toggle"
     }, "slow" ,function() {
-
+      
     });
   });
 

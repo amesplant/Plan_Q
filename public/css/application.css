@@ -12,6 +12,10 @@ html,body {
   padding: 0;
 }
 
+a, input {
+   outline: 0;
+}
+
 a, a:visited, a:hover, a:active {
   color: inherit;
 }
@@ -31,8 +35,19 @@ nav a {
   padding: 15px 10px;
 }
 
-nav a:hover, nav input[type="submit"]:hover {
-  background-color: #CCC;
+nav a.btn_planQ {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-left: 2%;
+  background: url("../images/btn_planQ.png") no-repeat bottom right;
+}
+
+#logout {
+  display: none;
+  /*position: relative;
+  top: 40px;
+  left: 80px;*/
 }
 
 nav a.btn_user {
@@ -51,7 +66,6 @@ nav input[type="submit"] {
 #container {
   margin: 6% 6% 0 6%;
   height: 100%;
-  min-width: 700px;
 }
 
 #container h1, h2 {
@@ -130,6 +144,7 @@ nav input[type="submit"] {
   display: block;
   color: white;
   margin: 30px auto;
+  text-align: center;
 }
 
 #home_navigation .btn_container {
@@ -181,7 +196,7 @@ nav input[type="submit"] {
   border-radius: 15px;
   margin: 5% 5% 5% 20%;
   min-height: 400px;
-  text-align: center;
+  text-align: left;
 }
 
 #lessons_container a {
@@ -200,6 +215,8 @@ nav input[type="submit"] {
 }
 
 .lesson_box {
+  display: inline-block;
+  vertical-align: top;
   text-align: left;
   border: 3px solid #3EA0CA;
   border-radius: 9px;
