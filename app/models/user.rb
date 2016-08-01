@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   has_many :lessons, through: :plans
   has_many :plans
 
-  validates :name, presence: true
+  validates :first_name, presence: true
+  validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :encrypted_password, presence: true
   validate :password_complexity

@@ -98,7 +98,8 @@ GEM
       nokogiri (~> 1.3)
 
 PLATFORMS
-  ruby '2.2.4'
+  ruby
+  unknown
 
 DEPENDENCIES
   activerecord (~> 4.2.0)
