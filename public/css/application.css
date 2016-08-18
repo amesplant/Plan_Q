@@ -44,11 +44,21 @@ nav a {
 }
 
 nav a.btn_planQ {
+  float: left;
   width: 40px;
   height: 40px;
   padding: 0;
   margin-left: 2%;
   background: url("../images/btn_planQ.png") no-repeat bottom right;
+}
+
+#main-navigation {
+  text-align: center;
+  height: 55px;
+}
+
+#page_title {
+  display: inline-block;
 }
 
 #logout {

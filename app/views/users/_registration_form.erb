@@ -2,11 +2,11 @@
 <div class="form">
 
 <form class="register-form" action = "/users" method="post">
-  <input class="first_name" type="text" placeholder="first_name" name="user[first_name]" value="<%= @user.try(:first_name) %>"/>
-  <input class="last_name" type="text" placeholder="last_name" name="user[last_name]" value="<%= @user.try(:last_name) %>"/>
+  <input class="first_name" type="text" placeholder="first name" name="user[first_name]" value="<%= @user.try(:first_name) %>"/>
+  <input class="last_name" type="text" placeholder="last name" name="user[last_name]" value="<%= @user.try(:last_name) %>"/>
   <input class="email" type="text" placeholder="email address" name="user[email]" value="<%= @user.try(:email) %>" />
   <input class="password" type="password" placeholder="password (at least 6 characters)" name="user[password]" />
-  <input class="confirm_password" type="password" placeholder="cofirm password" name="user[password_confirmation]" />
+  <input class="confirm_password" type="password" placeholder="cofirm password" name="password_confirmation" />
   <button>create</button>
 </form>
 

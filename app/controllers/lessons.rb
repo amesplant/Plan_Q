@@ -45,18 +45,13 @@ get '/lessons/new' do
   end
 end
 
-# prosess new lesson
+# process new lesson
 post '/lessons' do
   @lesson = Lesson.new(params[:lesson])
   if @lesson.save
     user = User.find(session[:user_id])
     user.plans.create(lesson: @lesson)
-    # try AJAX
-    if request.xhr?
-      return "success"
-    else
-      redirect "/lessons"
-    end
+    "/lessons/#{@lesson.id}/edit"
   else
     @errors = @lesson.errors
     # try AJAX

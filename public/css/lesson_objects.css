@@ -1,0 +1,57 @@
+#lesson_components {
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  width: 300px;
+  background-color: #FFF;
+  color: #8E9292;
+  -webkit-box-shadow: -5px 0 5px -5px #333;
+   -moz-box-shadow: -5px 0 5px -5px #333;
+        box-shadow: -5px 0 5px -5px #333;
+}
+
+.navigation {
+  padding-top: 5px;
+}
+
+.navigation a {
+  display: inline-block;
+  text-align: center;
+  width: 48%;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  font-size: 0.8em;
+
+}
+
+.header {
+  background: #8E9292;
+  height: 35px;
+  line-height: 35px;
+  color: #FFF;
+  margin: 0;
+  padding: 2px 0 0 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
+
+.object {
+  display: inline-block;
+  text-align: center;
+  font-size: 0.7em;
+  margin: 0;
+  width: 101px;
+  height: 101px;
+  border: 1px solid #8E9292;
+  white-space: nowrap;
+  margin: 0 0 -1px -1px;
+  background-color: #FFF;
+  padding-top: 30px;
+}
+
+.object .text {
+  display: block;
+  margin-top: 5px;
+}
