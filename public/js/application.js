@@ -6,25 +6,25 @@ $(document).ready(function() {
   })
 
   // toggle the log-in and regsitration window
-  $("#nav_registration").on("click", "a", function() {
-    var link= $(this).attr("class");
+  $("#nav_registration").on("click", ".flag", function() {
+    var flag = $(this);
+    var link = flag.find('a').attr("class");
     if (link == "login") {
-      $(".login-form").css("display","block")
-      $(".register-form").css("display","block")
-      console.log("login")
-      toggleForm();
+      if($('.register-form').is(':visible')) {
+        toggleForm();
+      }
     } else {
-      console.log("register")
-      toggleForm();
-    }
+      if($('.login-form').is(':visible')) {
+        toggleForm();
+      };
+    };
   });
 
   function toggleForm() {
     $('form').animate({
       height: "toggle",
       opacity: "toggle"
-    }, "slow" ,function() {
-    });
+    }, "slow");
   }
 
   // --- load the courses list --- //
@@ -91,6 +91,7 @@ $(document).ready(function() {
       }
 
       if(errors.password) {
+        $('input[type=password]').val("");
         passwordError = "Password " + errors.password[0];
         $(".password").css("border","1px solid red");
         $(".password").val("");

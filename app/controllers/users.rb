@@ -1,4 +1,4 @@
-# when users have successfully logged in ... send them to ... whereverr
+# when users have successfully logged in ... send them to ... wherever
 get '/users' do
 
   erb :index
@@ -15,12 +15,11 @@ post "/users" do
   #saves new user or returns false if unsuccessful
   if @user.save
     session[:user_id] = @user.id
-
     # try AJAX
     if request.xhr?
       return "success"
     else
-      redirect "/users" 
+      redirect "/"
     end
 
   else

@@ -6,7 +6,7 @@
   <input class="last_name" type="text" placeholder="last_name" name="user[last_name]" value="<%= @user.try(:last_name) %>"/>
   <input class="email" type="text" placeholder="email address" name="user[email]" value="<%= @user.try(:email) %>" />
   <input class="password" type="password" placeholder="password (at least 6 characters)" name="user[password]" />
-  <input class="confirm_password" type="password" placeholder="cofirm password" name="user[password]" />
+  <input class="confirm_password" type="password" placeholder="cofirm password" name="user[password_confirmation]" />
   <button>create</button>
 </form>
 

@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   validates :encrypted_password, presence: true
   validate :password_complexity
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+  validate :password_match
 
 
   def password
@@ -24,12 +25,18 @@ class User < ActiveRecord::Base
   end
 
   def authenticate(password)
-    self.password = password
+    self.password == password
   end
 
   def password_complexity
     if @user_entered_password && @user_entered_password.length < 6
       self.errors.add(:password, "should be at least 6 characters")
+    end
+  end
+
+  def password_match
+    if @user_entered_password != @user_enetered_password_confirmation
+      self.errors.add(:password, "passwords don't match")
     end
   end
 
