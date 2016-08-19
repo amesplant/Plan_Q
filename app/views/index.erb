@@ -1,9 +1,11 @@
 <!-- Navigation -->
-<%= erb :"_navigation", :layout => false %>
+<%= erb :"_navigation", :layout => false, locals: { title: "Plan Q" } %>
 
 <div id="container">
-  <h1>Lesson Planning made easier</h1>
-  <h2>designed for teachers by teachers</h1>
+  <div class = "header">
+    <h1>Lesson Planning made easier</h1>
+    <h2>designed for teachers by teachers</h1>
+  </div>
 
   <div id="home_navigation">
     <div class="btn_container">
