@@ -218,16 +218,29 @@ nav input[type="submit"] {
 /* Lessons */
 
 #lessons_container {
+  float: right;
   background-color: white;
   border: 5px solid #E88B3D;
   border-radius: 15px;
-  margin: 5% 5% 5% 20%;
+  margin: 5%;
   min-height: 400px;
   text-align: left;
 }
 
 #lessons_container a {
   text-decoration: none;
+}
+
+#flagpole {
+  float: left;
+  margin: 3% 0 0 5%;
+  width: 25px;
+  height: 100%;
+  background: url("../images/flag_pole_2.png") no-repeat;
+}
+
+#flag .red {
+  
 }
 
 #nav_lessons {
@@ -269,6 +282,11 @@ nav input[type="submit"] {
   outline: none;
   background-color: transparent;
   padding: 4px;
+}
+
+#lesson_desktop {
+  display: block;
+  height: 100%;
 }
 
 .lesson_standard_id {
