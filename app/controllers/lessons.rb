@@ -1,8 +1,7 @@
 # show all lessons
 get "/lessons" do
   if logged_in?
-    user = User.find(session[:user_id])
-    @lessons = user.lessons
+    @lessons = current_user.lessons
     erb :"lessons/index"
   else
     erb :"users/new"
@@ -11,7 +10,7 @@ end
 
 get '/lessons/:id/edit' do
   @lesson = Lesson.find(params[:id])
-  erb :'lessons/edit'
+  erb :"lessons/edit"
 end
 
 put '/lessons/:id' do
@@ -38,7 +37,6 @@ end
 # new lesson form
 get '/lessons/new' do
   if logged_in?
-    user = User.find(session[:user_id])
     erb :"lessons/new"
   else
     erb :'users/new'
@@ -49,8 +47,7 @@ end
 post '/lessons' do
   @lesson = Lesson.new(params[:lesson])
   if @lesson.save
-    user = User.find(session[:user_id])
-    user.plans.create(lesson: @lesson)
+    current_user.plans.create(lesson: @lesson)
     "/lessons/#{@lesson.id}/edit"
   else
     @errors = @lesson.errors

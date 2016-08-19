@@ -1,7 +1,6 @@
 <nav id="main-navigation">
   <% if logged_in? %>
-    <% user = current_user %>
-    <a class="btn_user" href = "/"><%= user.first_name %></a>
+    <a class="btn_user" href = "/"><%= current_user.first_name %></a>
     <form id="logout" action="/sessions" method="post">
       <input type="hidden" name="_method" value="delete">
       <input type="submit" value="Log Out">
@@ -11,5 +10,5 @@
     <a href = "sessions/">Login</a>
   <% end %>
   <a class="btn_planQ" href="/"></a>
-  <div id="page_title"><%= @title %></div>
+  <div id="page_title"><%= title %></div>
 </nav>

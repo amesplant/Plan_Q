@@ -6,6 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin:0;
+  font-family: 'Oxygen', sans-serif;
 }
 
 body {
@@ -55,10 +56,14 @@ nav a.btn_planQ {
 #main-navigation {
   text-align: center;
   height: 55px;
+  font-size: 0.9em;
+  color: #999;
 }
 
 #page_title {
   display: inline-block;
+  line-height: 55px;
+
 }
 
 #logout {
@@ -82,7 +87,7 @@ nav input[type="submit"] {
 }
 
 #container {
-  margin: 6% 6% 0 6%;
+  margin: 0;
   height: 100%;
 }
 
@@ -93,6 +98,10 @@ nav input[type="submit"] {
 
 #container h1 {
   font-weight: bolder;
+}
+
+#container .header {
+  margin: 4%;
 }
 
 /* Login / Registartion */
@@ -243,14 +252,23 @@ nav input[type="submit"] {
   height: 140px;
 }
 
-#lesson_header {
+.lesson_header {
   color: white;
   background-color: #3EA0CA;
   border-radius: 2px 2px 0 0;
 }
 
-#lesson_header form {
+.lesson_header .trash{
   float: right;
+}
+
+.lesson_header .btn_trash, .btn_edit {
+  float: right;
+  color: white;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 4px;
 }
 
 .lesson_standard_id {
@@ -284,16 +302,9 @@ nav input[type="submit"] {
   margin: 0;
 }
 
-.lesson_delete {
-  width: 18px;
-  height: 100%;
-  background: url("../images/btnTrash.png") no-repeat 0 7px;
-  border: none;
-  background-color: transparent;
-}
-
 /* New Lesson Form */
 #build_lesson {
+  display: block;
   margin: 5% auto 0 5%;
   height: 100%;
   padding-top: 100px;
@@ -306,7 +317,7 @@ nav input[type="submit"] {
   border: 3px solid #DAA43B;
   border-radius: 12px;
   background-color: white;
-  margin: 0 auto auto 35%;
+  margin: 0 auto auto 30%;
   padding: 0;
   min-width: 300px;
   min-height: 400px;
@@ -387,7 +398,6 @@ nav input[type="submit"] {
 #lesson-form button:hover {
   background-color:#3CB5E4;
 }
-
 
 .container {
   margin: 20px auto;

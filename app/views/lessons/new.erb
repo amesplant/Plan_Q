@@ -1,8 +1,10 @@
-<%= erb :"_navigation", :layout => false %>
+<%= erb :"_navigation", :layout => false, locals: { title: "Build a Lesson" } %>
 
-<div id="build_lesson">
-  <form id="lesson-form" action = "/lessons" method="post">
-  <%= erb :"/lessons/_lesson_form", :layout => false %>
-  <button>Start Building</button>
-  </form>
+<div id="container">
+  <div id="build_lesson">
+    <form id="lesson-form" action = "/lessons" method="post">
+      <%= erb :"/lessons/_lesson_form", :layout => false %>
+      <button>Start Building</button>
+    </form>
+  </div>
 </div>

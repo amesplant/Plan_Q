@@ -1,4 +1,4 @@
-<%= erb :"_navigation", :layout => false %>
+<%= erb :"_navigation", :layout => false, locals: { title: "Lessons" } %>
 
 <div id="lessons_container">
   <div id="nav_lessons">
@@ -9,12 +9,13 @@
   <% @lessons.each do |lesson| %>
 
       <div class="lesson_box">
-        <div id="lesson_header">
+        <div class="lesson_header">
           <div class="lesson_standard_id">8.NS.A.1</div>
-          <form action="/lessons/<%= lesson.id %>" method="post">
+          <form class="trash" action="/lessons/<%= lesson.id %>" method="post">
             <input type="hidden" name="_method" value="delete">
-            <input class="lesson_delete" type="submit" value="">
+            <button type="submit" class="btn_trash"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
           </form>
+          <a  class = "btn_edit" href="/lessons/<%= lesson.id %>/edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
         </div>
         <a href="/lessons/<%= lesson.id %>">
           <div class="lesson_title"><%= lesson.title %></div>
