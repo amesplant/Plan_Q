@@ -12,7 +12,6 @@ end
 # process registration form
 post "/users" do
   @user = User.new(params[:user])
-  p @user
   #saves new user or returns false if unsuccessful
   if @user.save
     session[:user_id] = @user.id
