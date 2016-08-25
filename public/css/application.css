@@ -87,7 +87,7 @@ nav input[type="submit"] {
 }
 
 #container {
-  margin: 0;
+  margin: 5%;
   height: 100%;
 }
 
@@ -416,14 +416,4 @@ nav input[type="submit"] {
 
 #lesson-form button:hover {
   background-color:#3CB5E4;
-}
-
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
-th {
-  text-align: left;
 }

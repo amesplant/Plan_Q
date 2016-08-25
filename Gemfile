@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
+ruby '2.3.0'
+
 # PostgreSQL driver
-gem 'pg'
+gem 'pg', group: :production
+gem 'sqlite3', group: :development
 
 # Sinatra driver
 gem 'sinatra'
@@ -27,3 +30,5 @@ group :test, :development do
   gem 'factory_girl'
   gem 'faker'
 end
+
+gem 'rails_12factor', group: :production
