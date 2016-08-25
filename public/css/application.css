@@ -87,7 +87,7 @@ nav input[type="submit"] {
 }
 
 #container {
-  margin: 0;
+  margin: 5%;
   height: 100%;
 }
 
@@ -219,6 +219,7 @@ nav input[type="submit"] {
 
 #lessons_container {
   float: right;
+  width: 80%;
   background-color: white;
   border: 5px solid #E88B3D;
   border-radius: 15px;
@@ -240,7 +241,7 @@ nav input[type="submit"] {
 }
 
 #flag .red {
-  
+
 }
 
 #nav_lessons {
@@ -260,7 +261,7 @@ nav input[type="submit"] {
   text-align: left;
   border: 3px solid #3EA0CA;
   border-radius: 9px;
-  width: 20%;
+  width: 160px;
   margin: 2%;
   height: 140px;
 }
@@ -415,14 +416,4 @@ nav input[type="submit"] {
 
 #lesson-form button:hover {
   background-color:#3CB5E4;
-}
-
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
-th {
-  text-align: left;
 }
